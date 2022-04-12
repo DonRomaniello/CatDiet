@@ -26,7 +26,7 @@ Wordpress <== Jupyter Notebook <== iOS Notes
 New Stack:
 Linux
 Express
-MariaDB
+Postgres
 Sequelize
 React
 Redux

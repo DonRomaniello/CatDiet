@@ -1,7 +1,20 @@
 {
+  "name" : "catdiet",
+  "version": "1.0.0",
+  "description": "Tracking cat weights and calories",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "start-dev": "nodemon app.js"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.7"
+  },
   "dependencies": {
+    "express": "^4.17.3",
     "node": "^17.7.2",
     "pg": "^8.7.3",
-    "sequelize": "^6.18.0"
+    "sequelize": "^6.18.0",
+    "webpack": "^5.72.0"
   }
 }

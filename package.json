@@ -1,20 +1,19 @@
 {
-  "name" : "catdiet",
+  "name": "catdiet",
   "version": "1.0.0",
-  "description": "Tracking cat weights and calories",
+  "description": "Tracking the cats diet and weight.",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
-    "start-dev": "nodemon app.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "devDependencies": {
-    "nodemon": "^1.14.7"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DonRomaniello/CatDiet.git"
   },
-  "dependencies": {
-    "express": "^4.17.3",
-    "node": "^17.7.2",
-    "pg": "^8.7.3",
-    "sequelize": "^6.18.0",
-    "webpack": "^5.72.0"
-  }
+  "author": "Don Romaniello",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DonRomaniello/CatDiet/issues"
+  },
+  "homepage": "https://github.com/DonRomaniello/CatDiet#readme"
 }

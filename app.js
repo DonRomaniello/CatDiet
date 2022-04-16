@@ -5,7 +5,6 @@ const ipaddress = "192.168.1.39"
 const path = require('path');
 const { db, Cat, Weight, Food } = require('./client/database')
 
-
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {

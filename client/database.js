@@ -19,7 +19,7 @@ const Weight = db.define('weight', {
     allowNull: false,
   },
   date: {
-    type: Sequelize.DATE,
+    type: Sequelize.DATEONLY,
     allowNull: false
   }
 });
@@ -38,7 +38,7 @@ const Food = db.define('food', {
     allowNull: false,
   },
   date: {
-    type: Sequelize.DATE,
+    type: Sequelize.DATEONLY,
     allowNull: false
   }
 });
@@ -56,17 +56,3 @@ module.exports = {
   Weight,
   Food
 };
-
-
-
-
-
-
-
-
-
-
-
-module.exports = db
-
-

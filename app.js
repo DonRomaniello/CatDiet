@@ -7,11 +7,7 @@ const { db, Cat, Weight, Food } = require('./client/database')
 
 app.use(express.static('public'));
 
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, './public/index.html'))
-})
-
-app.use('/api', async(req, res, next) => {
+app.get('/api', async(req, res, next) => {
   try {
     const cats = await Cat.findAll()
     res.send(cats)
@@ -20,7 +16,12 @@ app.use('/api', async(req, res, next) => {
   }
 })
 
-app.listen(port, ipaddress, () => {
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, './public/index.html'))
+})
+
+
+app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
 

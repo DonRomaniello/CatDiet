@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const port = 3000
+const ipaddress = "192.168.1.39"
 const path = require('path');
 const { db, Cat, Weight, Food } = require('./client/database')
 
@@ -20,7 +21,7 @@ app.use('/api', async(req, res, next) => {
   }
 })
 
-app.listen(port, () => {
+app.listen(port, ipaddress, () => {
   console.log(`Example app listening on port ${port}`)
 })
 

@@ -23,8 +23,31 @@ const sebastianWeights = {
   '2020-10-04': 4890
 }
 
+const sebastianFoods = [
+  { date: '2022-03-03',
+   wellness: 35,
+   weruva: 24,
+   dry: 9
+  },
+  { date: '2022-02-11',
+   wellness: 36,
+   weruva: 26,
+   dry: 9
+  }
+]
 
-
+const luniFoods = [
+  { date : '2022-03-03',
+    wellness: 25,
+    weruva: 17,
+    dry: 7
+  },
+  { date: '2022-02-11',
+   wellness: 17,
+   weruva: 24,
+   dry: 7
+  }
+]
 
 
 
@@ -64,6 +87,24 @@ const seed = async () => {
       await lunWeight.setCat(luni)
 
     }
+
+    for (entry in sebastianFoods){
+      const sebastianFood = await Food.create(
+        sebastianFoods[entry]
+      )
+
+      await sebastianFood.setCat(sebastian)
+    }
+
+    for (entry in luniFoods){
+      const luniFood = await Food.create(
+        luniFoods[entry]
+      )
+
+      await luniFood.setCat(luni)
+
+    }
+
 
   } catch (err){
     console.log(err);

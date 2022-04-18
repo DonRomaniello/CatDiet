@@ -3,7 +3,7 @@ const app = express()
 const port = 3000
 const ipaddress = "192.168.1.39"
 const path = require('path');
-const { db, Cat, Weight, Food } = require('./client/database')
+const { db, Cat, Weight, Food } = require('../client/database')
 
 app.use(express.static('public'));
 

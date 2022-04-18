@@ -8,7 +8,7 @@ const { db, Cat, Weight, Food } = require('../client/database')
 app.use(express.static('public'));
 
 
-app.get('/api/currentfood', async(req, res, next) => {
+app.get('/api/currentFood', async(req, res, next) => {
   try {
     const sebFood = await Food.findAll({
       limit: 1,
@@ -28,8 +28,8 @@ app.get('/api/currentfood', async(req, res, next) => {
     )
 
     const food = {
-      luni: lunFood,
-      sebastian: sebFood
+      luni: lunFood[0],
+      sebastian: sebFood[0]
     }
 
 

@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/DonRomaniello/CatDiet#readme",
   "dependencies": {
+    "axios": "^0.26.1",
     "babel": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
     "chalk": "^5.0.1",
     "express": "^4.17.3",
     "pg": "^8.7.3",
@@ -29,6 +31,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",
+    "babel-polyfill": "^6.26.0",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
     "babel-loader": "^8.2.4",

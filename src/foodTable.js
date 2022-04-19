@@ -5,16 +5,19 @@ import axios from 'axios';
 export default class Food extends React.Component {
   constructor() {
     super()
-    this.state = {food : {}}
+    this.state = {luni: {},
+                  sebastian: {}}
   }
 
   async componentDidMount () {
     try {
     const response = await axios.get('/api/currentFood')
 
-    const food = response.data
+    const {luni, sebastian} = response.data
 
-    this.setState({food: food})
+
+
+    this.setState({ luni, sebastian})
 
     }
     catch (err){
@@ -26,20 +29,35 @@ export default class Food extends React.Component {
 
 
   render () {
-    console.log(this.state.food.food)
 
-    const foods = this.state.food.food
+    console.log(this.state.luni.wellness)
+
+    //console.log(luni)
 
     return (
-      // {for (key in food)
-
-
-
-
-      // }
-
       <div>
-        These true kitties.
+        <table>
+          <tbody>
+            <tr>
+              <th></th>
+              <th>Luni</th>
+              <th>Sebastian</th>
+              <th>Combined</th>
+            </tr>
+            <tr>
+              <td>Hash</td>
+              <td>{this.state.luni.wellness}</td>
+              <td>{this.state.sebastian.wellness}</td>
+              <td>{this.state.luni.wellness + this.state.luni.wellness}</td>
+            </tr>
+            <tr>
+              <td>Chicken</td>
+            </tr>
+            <tr>
+              <td>Dry</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     )
 

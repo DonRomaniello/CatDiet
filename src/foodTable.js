@@ -30,9 +30,20 @@ export default class Food extends React.Component {
 
   render () {
 
-    console.log(this.state.luni.wellness)
+    const wellCal = 1.152
+    const werCal = .673
+    const dryCal = 4.36
 
-    //console.log(luni)
+    const luni = this.state.luni
+    const sebastian = this.state.sebastian
+
+    const luniCal = ((luni.wellness * wellCal)
+                      + (luni.weruva * werCal)
+                      + (luni.dry * dryCal))
+
+    const sebastianCal = ((sebastian.wellness * wellCal)
+                      + (sebastian.weruva * werCal)
+                      + (sebastian.dry * dryCal))
 
     return (
       <div>
@@ -46,15 +57,27 @@ export default class Food extends React.Component {
             </tr>
             <tr>
               <td>Hash</td>
-              <td>{this.state.luni.wellness}</td>
-              <td>{this.state.sebastian.wellness}</td>
-              <td>{this.state.luni.wellness + this.state.luni.wellness}</td>
+              <td>{luni.wellness}</td>
+              <td>{sebastian.wellness}</td>
+              <td>{luni.wellness + sebastian.wellness}</td>
             </tr>
             <tr>
               <td>Chicken</td>
+              <td>{luni.weruva}</td>
+              <td>{sebastian.weruva}</td>
+              <td>{luni.weruva + sebastian.weruva}</td>
             </tr>
             <tr>
               <td>Dry</td>
+              <td>{luni.dry}</td>
+              <td>{sebastian.dry}</td>
+              <td>{luni.dry + sebastian.dry}</td>
+            </tr>
+            <tr>
+              <td>kCal/day</td>
+              <td>{luniCal}</td>
+              <td>{sebastianCal}</td>
+              <td>{luniCal + sebastianCal}</td>
             </tr>
           </tbody>
         </table>

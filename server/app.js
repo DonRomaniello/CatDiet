@@ -40,6 +40,19 @@ app.get('/api/currentFood', async(req, res, next) => {
   }
 })
 
+app.get('/api/weights', async(req, res, next) => {
+  try {
+    const catWeights = await Weight.findAll({
+      attributes: ['catId', ['weight', 'date']],
+      // group: ['weights.catId']
+    })
+    res.send(catWeights)
+  } catch(err){
+    next(err)
+  }
+})
+
+
 app.get('/api', async(req, res, next) => {
   try {
     const cats = await Cat.findAll()

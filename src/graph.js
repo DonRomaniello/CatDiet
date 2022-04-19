@@ -2,50 +2,51 @@ import React from "react";
 import "regenerator-runtime/runtime";
 import axios from 'axios';
 
-export default class Food extends React.Component {
+export default class Graph extends React.Component {
   constructor() {
     super()
     this.state = {luni: {},
                   sebastian: {}}
   }
 
-  async componentDidMount () {
-    try {
-    const response = await axios.get('/api/currentFood')
+  // async componentDidMount () {
+  //   try {
+  //   const response = await axios.get('/api/currentFood')
 
-    const {luni, sebastian} = response.data
+  //   const {luni, sebastian} = response.data
 
-    this.setState({ luni, sebastian})
+  //   this.setState({ luni, sebastian})
 
-    }
-    catch (err){
-      console.log("Couldn't get food from database.")
-    }
-  }
+  //   }
+  //   catch (err){
+  //     console.log("Couldn't get food from database.")
+  //   }
+  // }
 
 
 
 
   render () {
 
-    const wellCal = 1.152
-    const werCal = .673
-    const dryCal = 4.36
+    // const wellCal = 1.152
+    // const werCal = .673
+    // const dryCal = 4.36
 
-    const luni = this.state.luni
-    const sebastian = this.state.sebastian
+    // const luni = this.state.luni
+    // const sebastian = this.state.sebastian
 
-    const luniCal = ((luni.wellness * wellCal)
-                      + (luni.weruva * werCal)
-                      + (luni.dry * dryCal))
+    // const luniCal = ((luni.wellness * wellCal)
+    //                   + (luni.weruva * werCal)
+    //                   + (luni.dry * dryCal))
 
-    const sebastianCal = ((sebastian.wellness * wellCal)
-                      + (sebastian.weruva * werCal)
-                      + (sebastian.dry * dryCal))
+    // const sebastianCal = ((sebastian.wellness * wellCal)
+    //                   + (sebastian.weruva * werCal)
+    //                   + (sebastian.dry * dryCal))
 
     return (
       <div>
-        <table>
+        Graph goes here.
+        {/* <table>
           <tbody>
             <tr>
               <th></th>
@@ -78,7 +79,7 @@ export default class Food extends React.Component {
               <td>{luniCal + sebastianCal}</td>
             </tr>
           </tbody>
-        </table>
+        </table> */}
       </div>
     )
 

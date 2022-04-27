@@ -1,6 +1,7 @@
 import React from "react";
 import "regenerator-runtime/runtime";
 import axios from 'axios';
+import { useSelector, useDispatch } from "react-redux";
 
 export default class Food extends React.Component {
   constructor() {

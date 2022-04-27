@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  background-image: linear-gradient(white, #B4BCD0);
+  background-image: linear-gradient(white, 90%, #B4BCD0);
   height: 100%;
   color: #181B25;
 }
